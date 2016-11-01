@@ -145,3 +145,16 @@ function main(conf) {
   bench.end(n); // End benchmarking
 }
 ```
+
+Supported options keys are:
+* `port` - defaults to `common.PORT`
+* `path` - defaults to `/`
+* `connections` - number of concurrent connections to use, defaults to 100
+* `duration` - duration of the benchmark in seconds, defaults to 10
+* `benchmarker` - benchmarker to use, defaults to
+`common.default_http_benchmarker`
+
+[autocannon]: https://github.com/mcollina/autocannon
+[wrk]: https://github.com/wg/wrk
+[t-test]: https://en.wikipedia.org/wiki/Student%27s_t-test#Equal_or_unequal_sample_sizes.2C_unequal_variances
+[git-for-windows]: http://git-scm.com/download/win
