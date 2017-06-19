@@ -591,9 +591,9 @@ Example:
 ```js
 const http = require('http');
 const server = http.createServer((req, res) => {
-  let clientIp = req.socket.remoteAddress;
-  let remotePort = req.socket.remotePort;
-  res.end(`Your IP address is ${clientIp} and the remote port is ${remotePort}.`);
+  const ip = req.socket.remoteAddress;
+  const port = req.socket.remotePort;
+  res.end(`Your IP address is ${ip} and your source port is ${port}.`);
 }).listen(3000);
 ```
 
@@ -1224,9 +1224,9 @@ Example:
 ```js
 const http = require('http');
 const server = http.createServer((req, res) => {
-  let clientIp = res.socket.remoteAddress;
-  let remotePort = res.socket.remotePort;
-  res.end(`Your IP address is ${clientIp} and the remote port is ${remotePort}.`);
+  const ip = req.socket.remoteAddress;
+  const port = req.socket.remotePort;
+  res.end(`Your IP address is ${ip} and your source port is ${port}.`);
 }).listen(3000);
 ```
 
